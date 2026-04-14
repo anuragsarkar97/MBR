@@ -5,8 +5,8 @@ package orphan
 import (
 	"strconv"
 
-	"github.com/angsak/mbr/internal/aws/collector"
-	"github.com/angsak/mbr/internal/aws/graph"
+	"github.com/anuragsarkar97/mbr/internal/aws/collector"
+	"github.com/anuragsarkar97/mbr/internal/aws/graph"
 )
 
 func init() {
@@ -21,8 +21,8 @@ func init() {
 
 type elbv2NotActiveRule struct{}
 
-func (r elbv2NotActiveRule) Name() string                        { return "elbv2-not-active" }
-func (r elbv2NotActiveRule) AppliesTo() collector.ResourceType   { return collector.TypeELBV2 }
+func (r elbv2NotActiveRule) Name() string                      { return "elbv2-not-active" }
+func (r elbv2NotActiveRule) AppliesTo() collector.ResourceType { return collector.TypeELBV2 }
 func (r elbv2NotActiveRule) Detect(g *graph.ResourceGraph) {
 	for _, n := range g.FilterByType(collector.TypeELBV2) {
 		state := n.Resource.Metadata["State"]
@@ -38,8 +38,10 @@ func (r elbv2NotActiveRule) Detect(g *graph.ResourceGraph) {
 
 type elbClassicNoInstancesRule struct{}
 
-func (r elbClassicNoInstancesRule) Name() string                        { return "elb-no-instances" }
-func (r elbClassicNoInstancesRule) AppliesTo() collector.ResourceType   { return collector.TypeELBClassic }
+func (r elbClassicNoInstancesRule) Name() string { return "elb-no-instances" }
+func (r elbClassicNoInstancesRule) AppliesTo() collector.ResourceType {
+	return collector.TypeELBClassic
+}
 func (r elbClassicNoInstancesRule) Detect(g *graph.ResourceGraph) {
 	for _, n := range g.FilterByType(collector.TypeELBClassic) {
 		count, _ := strconv.Atoi(n.Resource.Metadata["InstanceCount"])
@@ -55,8 +57,8 @@ func (r elbClassicNoInstancesRule) Detect(g *graph.ResourceGraph) {
 
 type asgZeroDesiredRule struct{}
 
-func (r asgZeroDesiredRule) Name() string                        { return "asg-zero-desired" }
-func (r asgZeroDesiredRule) AppliesTo() collector.ResourceType   { return collector.TypeASG }
+func (r asgZeroDesiredRule) Name() string                      { return "asg-zero-desired" }
+func (r asgZeroDesiredRule) AppliesTo() collector.ResourceType { return collector.TypeASG }
 func (r asgZeroDesiredRule) Detect(g *graph.ResourceGraph) {
 	for _, n := range g.FilterByType(collector.TypeASG) {
 		desired, _ := strconv.Atoi(n.Resource.Metadata["DesiredCapacity"])

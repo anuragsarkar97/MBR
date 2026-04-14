@@ -1,4 +1,4 @@
-module github.com/angsak/mbr
+module github.com/anuragsarkar97/mbr
 
 go 1.25.4
 

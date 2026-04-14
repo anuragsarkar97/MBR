@@ -4,8 +4,8 @@ package orphan
 // An unattached volume has state == "available" in AWS.
 
 import (
-	"github.com/angsak/mbr/internal/aws/collector"
-	"github.com/angsak/mbr/internal/aws/graph"
+	"github.com/anuragsarkar97/mbr/internal/aws/collector"
+	"github.com/anuragsarkar97/mbr/internal/aws/graph"
 )
 
 // init registers the UnattachedEBSRule with the package-level Rules slice.

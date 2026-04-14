@@ -36,9 +36,9 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	"github.com/angsak/mbr/internal/aws/collector"
-	"github.com/angsak/mbr/internal/aws/cost"
-	"github.com/angsak/mbr/internal/aws/graph"
+	"github.com/anuragsarkar97/mbr/internal/aws/collector"
+	"github.com/anuragsarkar97/mbr/internal/aws/cost"
+	"github.com/anuragsarkar97/mbr/internal/aws/graph"
 )
 
 // ── Messages ─────────────────────────────────────────────────────────────────
@@ -228,7 +228,7 @@ func (m DetailViewModel) buildLines() []string {
 	if m.node.IsOrphan {
 		orphanStr := amber.Render("⚠  orphan")
 		if len(m.node.OrphanReasons) > 0 {
-			orphanStr += dim.Render("  — "+m.node.OrphanReasons[0])
+			orphanStr += dim.Render("  — " + m.node.OrphanReasons[0])
 		}
 		add("  " + orphanStr)
 	}

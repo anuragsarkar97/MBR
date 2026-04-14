@@ -26,7 +26,7 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	"github.com/angsak/mbr/internal/aws/collector"
+	"github.com/anuragsarkar97/mbr/internal/aws/collector"
 )
 
 // ── Messages ─────────────────────────────────────────────────────────────────

@@ -7,7 +7,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/angsak/mbr/internal/aws/collector"
+	"github.com/anuragsarkar97/mbr/internal/aws/collector"
 )
 
 // Relationship describes the semantic of a directed edge between two nodes.

@@ -15,7 +15,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/costexplorer"
 	cetypes "github.com/aws/aws-sdk-go-v2/service/costexplorer/types"
 
-	"github.com/angsak/mbr/internal/aws/collector"
+	"github.com/anuragsarkar97/mbr/internal/aws/collector"
 )
 
 // Result holds the cost lookup outcome for one resource.
@@ -72,7 +72,7 @@ func FetchResource(ctx context.Context, cfg aws.Config, res collector.Resource) 
 	}
 
 	out, err := client.GetCostAndUsageWithResources(ctx, &costexplorer.GetCostAndUsageWithResourcesInput{
-		TimePeriod: &cetypes.DateInterval{Start: aws.String(start), End: aws.String(end)},
+		TimePeriod:  &cetypes.DateInterval{Start: aws.String(start), End: aws.String(end)},
 		Granularity: cetypes.GranularityMonthly,
 		Filter: &cetypes.Expression{
 			And: []cetypes.Expression{

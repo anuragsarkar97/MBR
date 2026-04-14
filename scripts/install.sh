@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # mbr install script
-# Usage: curl -sSfL https://raw.githubusercontent.com/angsak/mbr/main/scripts/install.sh | sh
+# Usage: curl -sSfL https://raw.githubusercontent.com/anuragsarkar97/mbr/main/scripts/install.sh | sh
 #
 # Environment variables:
 #   MBR_INSTALL_DIR   Installation directory (default: /usr/local/bin)
@@ -8,7 +8,7 @@
 
 set -e
 
-REPO="angsak/mbr"
+REPO="anuragsarkar97/mbr"
 BINARY="mbr"
 INSTALL_DIR="${MBR_INSTALL_DIR:-/usr/local/bin}"
 VERSION="${MBR_VERSION:-}"

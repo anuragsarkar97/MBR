@@ -6,8 +6,8 @@
 package orphan
 
 import (
-	"github.com/angsak/mbr/internal/aws/collector"
-	"github.com/angsak/mbr/internal/aws/graph"
+	"github.com/anuragsarkar97/mbr/internal/aws/collector"
+	"github.com/anuragsarkar97/mbr/internal/aws/graph"
 )
 
 // OrphanRule examines the resource graph and marks nodes as orphans.

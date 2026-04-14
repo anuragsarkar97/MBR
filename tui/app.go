@@ -24,12 +24,12 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	"github.com/angsak/mbr/internal/aws/collector"
-	"github.com/angsak/mbr/internal/aws/cost"
-	"github.com/angsak/mbr/internal/aws/graph"
-	"github.com/angsak/mbr/internal/aws/orphan"
-	"github.com/angsak/mbr/tui/components"
-	"github.com/angsak/mbr/tui/views"
+	"github.com/anuragsarkar97/mbr/internal/aws/collector"
+	"github.com/anuragsarkar97/mbr/internal/aws/cost"
+	"github.com/anuragsarkar97/mbr/internal/aws/graph"
+	"github.com/anuragsarkar97/mbr/internal/aws/orphan"
+	"github.com/anuragsarkar97/mbr/tui/components"
+	"github.com/anuragsarkar97/mbr/tui/views"
 )
 
 // headerHeight is the number of terminal rows consumed by the top header bar.
@@ -446,4 +446,3 @@ func startScanCmd(cfg aws.Config, regions []string) tea.Cmd {
 		return scanResultMsg{resources: resources, err: err}
 	}
 }
-

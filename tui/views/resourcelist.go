@@ -19,8 +19,8 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	"github.com/angsak/mbr/internal/aws/collector"
-	"github.com/angsak/mbr/internal/aws/graph"
+	"github.com/anuragsarkar97/mbr/internal/aws/collector"
+	"github.com/anuragsarkar97/mbr/internal/aws/graph"
 )
 
 // ── Messages ──────────────────────────────────────────────────────────────────
@@ -112,8 +112,8 @@ var typeLabel = map[collector.ResourceType]string{
 
 // renderedLine is one display row in the scrollable buffer.
 type renderedLine struct {
-	text     string // pre-rendered, full-width string
-	nodeID   string // non-empty only for selectable resource rows
+	text   string // pre-rendered, full-width string
+	nodeID string // non-empty only for selectable resource rows
 }
 
 // ResourceListModel is the BubbleTea model for the grouped resource browser.
@@ -152,8 +152,8 @@ func (m ResourceListModel) Update(msg tea.Msg) (ResourceListModel, tea.Cmd) {
 	case tea.WindowSizeMsg:
 		m.width = msg.Width
 		m.height = msg.Height
-		m.lines = m.buildLines()          // rebuild after resize
-		m.cursor = m.firstSelectable()    // reset to first item
+		m.lines = m.buildLines()       // rebuild after resize
+		m.cursor = m.firstSelectable() // reset to first item
 
 	case tea.KeyMsg:
 		// Ensure lines are populated (guard against first Update before View).

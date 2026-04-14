@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/angsak/mbr/internal/aws/collector"
+	"github.com/anuragsarkar97/mbr/internal/aws/collector"
 )
 
 // edgeRule is a function that scans the full resource index and adds edges to

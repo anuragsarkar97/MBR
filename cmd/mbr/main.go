@@ -20,16 +20,16 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/spf13/cobra"
 
-	awspkg "github.com/angsak/mbr/internal/aws"
-	"github.com/angsak/mbr/internal/aws/collector"
-	"github.com/angsak/mbr/internal/aws/graph"
-	"github.com/angsak/mbr/internal/aws/orphan"
-	"github.com/angsak/mbr/internal/version"
-	"github.com/angsak/mbr/tui"
+	awspkg "github.com/anuragsarkar97/mbr/internal/aws"
+	"github.com/anuragsarkar97/mbr/internal/aws/collector"
+	"github.com/anuragsarkar97/mbr/internal/aws/graph"
+	"github.com/anuragsarkar97/mbr/internal/aws/orphan"
+	"github.com/anuragsarkar97/mbr/internal/version"
+	"github.com/anuragsarkar97/mbr/tui"
 
 	// Blank imports register all collectors and orphan rules via init().
-	_ "github.com/angsak/mbr/internal/aws/collector"
-	_ "github.com/angsak/mbr/internal/aws/orphan"
+	_ "github.com/anuragsarkar97/mbr/internal/aws/collector"
+	_ "github.com/anuragsarkar97/mbr/internal/aws/orphan"
 )
 
 // Global flags shared across all commands.

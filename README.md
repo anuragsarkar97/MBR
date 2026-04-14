@@ -36,13 +36,13 @@
 **curl (recommended):**
 
 ```sh
-curl -sSfL https://raw.githubusercontent.com/angsak/mbr/main/scripts/install.sh | sh
+curl -sSfL https://raw.githubusercontent.com/anuragsarkar97/mbr/main/scripts/install.sh | sh
 ```
 
 Installs to `/usr/local/bin/mbr`. To install somewhere else:
 
 ```sh
-MBR_INSTALL_DIR=~/.local/bin curl -sSfL https://raw.githubusercontent.com/angsak/mbr/main/scripts/install.sh | sh
+MBR_INSTALL_DIR=~/.local/bin curl -sSfL https://raw.githubusercontent.com/anuragsarkar97/mbr/main/scripts/install.sh | sh
 ```
 
 Supports macOS (arm64, amd64) and Linux (arm64, amd64).
@@ -52,13 +52,13 @@ Supports macOS (arm64, amd64) and Linux (arm64, amd64).
 **Go install:**
 
 ```sh
-go install github.com/angsak/mbr/cmd/mbr@latest
+go install github.com/anuragsarkar97/mbr/cmd/mbr@latest
 ```
 
 **Build from source** (requires Go 1.21+):
 
 ```sh
-git clone https://github.com/angsak/mbr
+git clone https://github.com/anuragsarkar97/mbr
 cd mbr
 make build        # → bin/mbr
 ```
